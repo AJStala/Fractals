@@ -30,7 +30,7 @@ public class SimpleAnimation extends JPanel
     }// SimpleAnimation()
     
     @Override
-    public void paintComonent(Graphics g) {
+    public void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
         
@@ -46,17 +46,15 @@ public class SimpleAnimation extends JPanel
         AffineTransform transform = new AffineTransform();
         
         transform.concatenate(scale);
-        transfrom.concatenate(translate);
+        transform.concatenate(translate);
         
         double x0 = Math.cos(this.angle);
         double y0 = Math.sin(this.angle);
         
         double x1 = Math.cos(this.angle + Math.PI);
-        double y1 = Math.sin(this.angle + Mathi.PI);
+        double y1 = Math.sin(this.angle + Math.PI);
         
         Line2D line = new Line2D.Double(x0,y0, x1, y1);
-        
-        Shape line = new Line2D.Double(x0, y0, x1, y1);
         
         Shape shape = transform.createTransformedShape(line);
         

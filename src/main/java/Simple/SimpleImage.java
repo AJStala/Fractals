@@ -49,7 +49,7 @@ public class SimpleImage extends JPanel {
             double imageHeight =  image.getHeight();
             
             AffineTransform scale = new AffineTransform();
-            scale.setToScale(panelWdth / imageWidth,
+            scale.setToScale(panelWidth / imageWidth,
                     panelHeight / imageHeight);
             
             int[] color = new int[3];
@@ -68,8 +68,8 @@ public class SimpleImage extends JPanel {
             
             g2d.drawImage(image, scale, this);
         }//try
-        catch (IOExecption ex) {
-            logger.log(Level.SEVER, null, ex);
+        catch (IOException ex) {
+            logger.log(Level.SEVERE, null, ex);
         }//catch( IOException
         
     }//paintComponent( Graphics )

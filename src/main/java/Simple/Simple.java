@@ -29,24 +29,24 @@ public class Simple extends JFrame {
         
         Container pane = this.getContentPane();
         
-      Jpanel panel = new JPanel();
-      panel.setBackground(Color.CYAN);
-      pane.add(panel);
+//        JPanel panel = new JPanel();
+//        panel.setBackground(Color.CYAN);
+//        pane.add(panel);
 
 
-      SimplePicture panel = new SimplePicture();
-      pane.add(panel);
+//        SimplePicture panel = new SimplePicture();
+//        pane.add(panel);
 
-      SimpleBitmap panel = new SImpleBitmap();
-      pane.add(panel);
+        SimpleBitmap panel = new SimpleBitmap();
+        pane.add(panel);
 
-      SimpleImage panel = new SimpleImage();
-      pane.add(panel);
+//        SimpleImage panel = new SimpleImage();
+//        pane.add(panel);
 
-      SimpleAnimation panel = new SimpleAnimation();
-      pane.add(panel);
-      Timer timer = new Timer(20, panel);
-      timer.start();
+//        SimpleAnimation panel = new SimpleAnimation();
+//        pane.add(panel);
+//        Timer timer = new Timer(20, panel);
+//        timer.start();
 
     this.setVisible(true);
     }// Simple()
