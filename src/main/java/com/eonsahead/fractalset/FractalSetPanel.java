@@ -37,7 +37,7 @@ public class FractalSetPanel extends JPanel {
 
         WritableRaster raster = this.image.getRaster();
         
-        int [][] palette = new int[64][3];
+        int [][] palette = new int[64][238];
         
         Color startColor = Color.RED;
         int r0 = startColor.getRed();
@@ -81,12 +81,12 @@ public class FractalSetPanel extends JPanel {
                 double u = uMin + (uMax - uMin) * (x - xMin)/(xMax - xMin);
                 double v = vMin + (vMax - vMin) * (y - yMin)/(yMax - yMin);
                 
-                Complex z = new Complex( 0.0, 0.0 );
+                Complex z = new Complex( -0.1, 0.1 );
                 Complex c = new Complex( u, v );
                 
                 int count = 0;
                
-                while( z.magnitudeSquared() < 4.0 && count < 64 ) {
+                while( z.magnitudeSquared() < 2.0 && count < 64 ) {
                     // z = z^2 + c
                     z = z.multiply(z);
                     z = z.add(c);

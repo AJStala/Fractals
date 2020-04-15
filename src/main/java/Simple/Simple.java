@@ -29,16 +29,16 @@ public class Simple extends JFrame {
         
         Container pane = this.getContentPane();
         
-//        JPanel panel = new JPanel();
-//        panel.setBackground(Color.CYAN);
-//        pane.add(panel);
+        JPanel panel = new JPanel();
+        panel.setBackground(Color.CYAN);
+        pane.add(panel);
 
 
 //        SimplePicture panel = new SimplePicture();
 //        pane.add(panel);
 
-        SimpleBitmap panel = new SimpleBitmap();
-        pane.add(panel);
+//        SimpleBitmap panel = new SimpleBitmap();
+//        pane.add(panel);
 
 //        SimpleImage panel = new SimpleImage();
 //        pane.add(panel);
